@@ -22,7 +22,7 @@ DEBUG_PROXY_EXE="ios_webkit_debug_proxy"
 
 if [ "$arg" != "-noServer" ]; then
   echo "Running ios-webkit-debug-proxy..."
-  $DEBUG_PROXY_EXE --no-frontend &
+  /home/antony/src/git/ios-webkit-debug-proxy/src/$DEBUG_PROXY_EXE --no-frontend &
 
   # https://rimuhosting.com/knowledgebase/linux/misc/trapping-ctrl-c-in-bash
   trap ctrl_c INT
@@ -33,7 +33,7 @@ if [ "$arg" != "-noServer" ]; then
   }
 
   HOST="localhost"
-  PORT="8080"
+  PORT="9000"
   DIR="WebKit/Source/WebInspectorUI/UserInterface/"
 
   echo ""
